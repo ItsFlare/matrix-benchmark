@@ -5,7 +5,7 @@ This repository features variants of 2x2, 3x3 & 4x4 float matrices with decently
 - 👍 Fast array access for off-heap transfer
 - 👎 Additional indirection*
 
-<sub>*Leads to more frequent cache misses in real-world applications</sub>
+<sub>*May lead to more frequent cache misses in real-world applications</sub>
 
 ### Field-backed
 - 👎 Slower random access due to jump table
@@ -20,8 +20,7 @@ This repository features variants of 2x2, 3x3 & 4x4 float matrices with decently
 📩 Feel free to run the package and submit an issue with your own results and hardware details.
 
 > [!WARNING]
-> Keep in mind that microbenchmarks are not necessarily representative of performance in real-world applications!
-> <br>Factors like access patterns, caches and JVM settings can have a major impact on relative performance.
+> Keep in mind that microbenchmarks are not necessarily representative of performance in real-world applications! Access patterns, caches and JVM settings can have a major impact on relative performance.
 ```
 # JMH version: 1.35
 # VM version: JDK 21.0.1, OpenJDK 64-Bit Server VM, 21.0.1+12-29
