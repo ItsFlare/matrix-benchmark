@@ -10,9 +10,9 @@ import java.util.concurrent.ThreadLocalRandom;
 import static java.util.concurrent.TimeUnit.NANOSECONDS;
 
 @BenchmarkMode({Mode.AverageTime})
-@Warmup(iterations = 1)
-@Fork(value = 1, warmups = 0)
-@Measurement(iterations = 2)
+@Warmup(iterations = 2)
+@Fork(value = 2, warmups = 0)
+@Measurement(iterations = 5)
 @OutputTimeUnit(value = NANOSECONDS)
 public class MatrixBenchmark {
 
