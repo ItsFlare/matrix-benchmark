@@ -1,5 +1,8 @@
 package net.durchholz.matbench;
 
+/**
+ * Field-backed mutable 3x3 matrix
+ */
 public final class FieldMatrix3f extends Matrix3f {
 
     private float _00, _01, _02, _10, _11, _12, _20, _21, _22;

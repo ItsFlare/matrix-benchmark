@@ -2,6 +2,9 @@ package net.durchholz.matbench;
 
 import java.util.Arrays;
 
+/**
+ * Row-major array-backed mutable 2x2 matrix
+ */
 public final class ArrayMatrix2f extends Matrix2f {
 
     private final float[] values;

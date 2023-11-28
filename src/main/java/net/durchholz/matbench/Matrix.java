@@ -6,16 +6,32 @@ public abstract sealed class Matrix permits Matrix2f, Matrix3f, Matrix4f {
 
     public abstract void set(int row, int column, float value);
 
+    /**
+     * Scales all elements of this matrix by the given factor.
+     * @param factor scalar
+     */
     public abstract void scale(float factor);
 
     public abstract float determinant();
 
+    /**
+     * Inverts this matrix if it is invertible (non-zero determinant)
+     * @throws ArithmeticException if matrix is not invertible
+     */
     public abstract void invert();
 
     public abstract void transpose();
 
+    /**
+     * Array representation in row-major order.
+     * @return either the backing array or new array
+     */
     public abstract float[] array();
 
+    /**
+     * Matrix dimension, the square of which equals amount of elements.
+     * @return matrix dimension
+     */
     public abstract int dimension();
 
     public abstract Matrix copy();

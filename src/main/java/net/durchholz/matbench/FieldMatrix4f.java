@@ -1,5 +1,8 @@
 package net.durchholz.matbench;
 
+/**
+ * Field-backed mutable 4x4 matrix
+ */
 public final class FieldMatrix4f extends Matrix4f {
 
     public float _00,  _01,  _02,  _03,  _10,  _11,  _12,  _13,  _20,  _21,  _22,  _23,  _30,  _31,  _32,  _33;

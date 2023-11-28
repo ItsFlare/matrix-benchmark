@@ -1,5 +1,8 @@
 package net.durchholz.matbench;
 
+/**
+ * Field-backed mutable 2x2 matrix
+ */
 public final class FieldMatrix2f extends Matrix2f {
 
     private float _00, _01, _10, _11;

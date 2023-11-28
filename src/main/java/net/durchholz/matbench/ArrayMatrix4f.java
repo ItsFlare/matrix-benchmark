@@ -3,7 +3,7 @@ package net.durchholz.matbench;
 import java.util.Arrays;
 
 /**
- * Row-major array backed mutable 4x4 matrix
+ * Row-major array-backed mutable 4x4 matrix
  */
 public final class ArrayMatrix4f extends Matrix4f {
 
