@@ -10,9 +10,9 @@ This repository features variants of 2x2, 3x3 & 4x4 float matrices with decently
 ### Field-backed
 - 👎 Slower random access due to jump table
 - 👎 Slower array access
-- 👍 Slightly better calculation latency*
+- 👍 Faster multiplication*
 
-<sub>*In some operations, presumably due to higher locality</sub>
+<sub>*Cause to be determined, assumed to be due to higher locality</sub>
 
 ## Results
 🖥️ Ryzen 5 3600 @ 4 GHz / 16 GB Corsair Vengeance Pro DDR4-3200 CL16 @ 1066 MHz / Win11
