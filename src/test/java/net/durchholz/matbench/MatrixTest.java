@@ -105,6 +105,18 @@ class MatrixTest {
         }
     }
 
+    @ParameterizedTest
+    @MethodSource("parameters")
+    public void array(Matrix matrix) {
+        var array = matrix.array();
+
+        for (int i = 0; i < matrix.dimension(); i++) {
+            for (int j = 0; j < matrix.dimension(); j++) {
+                assertEquals(matrix.get(i, j), array[linearize(i, j, matrix.dimension())]);
+            }
+        }
+    }
+
     private static List<Matrix> parameters() {
         return List.of(
                 randomize(new ArrayMatrix2f()),
@@ -132,5 +144,9 @@ class MatrixTest {
 
     private static boolean range(float min, float max, float value) {
         return value >= min && value <= max;
+    }
+
+    private static int linearize(int row, int column, int dimension) {
+        return dimension * row + column;
     }
 }
