@@ -5,13 +5,15 @@ package net.durchholz.matbench;
  */
 public final class FieldMatrix2f extends Matrix2f {
 
-    private float _00, _01, _10, _11;
+    private float _00, _01;
+    private float _10, _11;
 
     public FieldMatrix2f() {
 
     }
 
-    public FieldMatrix2f(float _00, float _01, float _10, float _11) {
+    public FieldMatrix2f(float _00, float _01,
+                         float _10, float _11) {
         this._00 = _00;
         this._01 = _01;
 
@@ -40,11 +42,11 @@ public final class FieldMatrix2f extends Matrix2f {
     public float get(int row, int column) {
         return switch (index(row, column)) {
 
-            case 0 ->  _00;
-            case 1 ->  _01;
+            case 0 -> _00;
+            case 1 -> _01;
 
-            case 2 ->  _10;
-            case 3 ->  _11;
+            case 2 -> _10;
+            case 3 -> _11;
 
             default -> throw new IllegalStateException("(Row %d | Column %d) is out of bounds".formatted(row, column));
         };
@@ -54,11 +56,11 @@ public final class FieldMatrix2f extends Matrix2f {
     public void set(int row, int column, float value) {
         switch (index(row, column)) {
 
-            case 0 ->  _00 = value;
-            case 1 ->  _01 = value;
+            case 0 -> _00 = value;
+            case 1 -> _01 = value;
 
-            case 2 ->  _10 = value;
-            case 3 ->  _11 = value;
+            case 2 -> _10 = value;
+            case 3 -> _11 = value;
 
             default -> throw new IllegalStateException("(Row %d | Column %d) is out of bounds".formatted(row, column));
         }

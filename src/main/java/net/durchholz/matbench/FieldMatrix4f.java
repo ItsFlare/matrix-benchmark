@@ -5,7 +5,10 @@ package net.durchholz.matbench;
  */
 public final class FieldMatrix4f extends Matrix4f {
 
-    public float _00,  _01,  _02,  _03,  _10,  _11,  _12,  _13,  _20,  _21,  _22,  _23,  _30,  _31,  _32,  _33;
+    public float _00,  _01,  _02,  _03;
+    public float _10,  _11,  _12,  _13;
+    public float _20,  _21,  _22,  _23;
+    public float _30,  _31,  _32,  _33;
 
     public FieldMatrix4f() {
 
@@ -33,7 +36,10 @@ public final class FieldMatrix4f extends Matrix4f {
         this._33 = matrix._33;
     }
 
-    public FieldMatrix4f(float _00, float _01, float _02, float _03, float _10, float _11, float _12, float _13, float _20, float _21, float _22, float _23, float _30, float _31, float _32, float _33) {
+    public FieldMatrix4f(float _00, float _01, float _02, float _03,
+                         float _10, float _11, float _12, float _13,
+                         float _20, float _21, float _22, float _23,
+                         float _30, float _31, float _32, float _33) {
         this._00 = _00;
         this._01 = _01;
         this._02 = _02;

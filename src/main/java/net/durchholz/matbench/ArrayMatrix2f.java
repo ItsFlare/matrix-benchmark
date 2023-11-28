@@ -17,7 +17,8 @@ public final class ArrayMatrix2f extends Matrix2f {
         this(new float[LENGTH]);
     }
 
-    public ArrayMatrix2f(float _00, float _01, float _10, float _11) {
+    public ArrayMatrix2f(float _00, float _01,
+                         float _10, float _11) {
         this(new float[]{_00, _01, _10, _11});
     }
 
@@ -79,7 +80,7 @@ public final class ArrayMatrix2f extends Matrix2f {
 
         f = values[2];
         values[2] = values[1];
-        values[1] =  f;
+        values[1] = f;
     }
 
     @Override
@@ -106,11 +107,11 @@ public final class ArrayMatrix2f extends Matrix2f {
     public static ArrayMatrix2f multiply(ArrayMatrix2f a, ArrayMatrix2f b) {
         final ArrayMatrix2f m = new ArrayMatrix2f();
 
-        m.values[0]  = a.values[0] * b.values[0] + a.values[1] * b.values[2];
-        m.values[1]  = a.values[0] * b.values[1] + a.values[1] * b.values[3];
+        m.values[0] = a.values[0] * b.values[0] + a.values[1] * b.values[2];
+        m.values[1] = a.values[0] * b.values[1] + a.values[1] * b.values[3];
 
-        m.values[2]  = a.values[2] * b.values[0] + a.values[3] * b.values[2];
-        m.values[3]  = a.values[2] * b.values[1] + a.values[3] * b.values[3];
+        m.values[2] = a.values[2] * b.values[0] + a.values[3] * b.values[2];
+        m.values[3] = a.values[2] * b.values[1] + a.values[3] * b.values[3];
 
         return m;
     }

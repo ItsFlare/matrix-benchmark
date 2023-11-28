@@ -5,13 +5,17 @@ package net.durchholz.matbench;
  */
 public final class FieldMatrix3f extends Matrix3f {
 
-    private float _00, _01, _02, _10, _11, _12, _20, _21, _22;
+    private float _00, _01, _02;
+    private float _10, _11, _12;
+    private float _20, _21, _22;
 
     public FieldMatrix3f() {
 
     }
 
-    public FieldMatrix3f(float _00, float _01, float _02, float _10, float _11, float _12, float _20, float _21, float _22) {
+    public FieldMatrix3f(float _00, float _01, float _02,
+                         float _10, float _11, float _12,
+                         float _20, float _21, float _22) {
         this._00 = _00;
         this._01 = _01;
         this._02 = _02;
@@ -53,16 +57,16 @@ public final class FieldMatrix3f extends Matrix3f {
     public float get(int row, int column) {
         return switch (index(row, column)) {
 
-            case 0 ->  _00;
-            case 1 ->  _01;
-            case 2 ->  _02;
+            case 0 -> _00;
+            case 1 -> _01;
+            case 2 -> _02;
 
-            case 3 ->  _10;
-            case 4 ->  _11;
-            case 5 ->  _12;
+            case 3 -> _10;
+            case 4 -> _11;
+            case 5 -> _12;
 
-            case 6 ->  _20;
-            case 7 ->  _21;
+            case 6 -> _20;
+            case 7 -> _21;
             case 8 -> _22;
 
             default -> throw new IllegalStateException("(Row %d | Column %d) is out of bounds".formatted(row, column));
@@ -73,16 +77,16 @@ public final class FieldMatrix3f extends Matrix3f {
     public void set(int row, int column, float value) {
         switch (index(row, column)) {
 
-            case 0 ->  _00 = value;
-            case 1 ->  _01 = value;
-            case 2 ->  _02 = value;
+            case 0 -> _00 = value;
+            case 1 -> _01 = value;
+            case 2 -> _02 = value;
 
-            case 3 ->  _10 = value;
-            case 4 ->  _11 = value;
-            case 5 ->  _12 = value;
+            case 3 -> _10 = value;
+            case 4 -> _11 = value;
+            case 5 -> _12 = value;
 
-            case 6 ->  _20 = value;
-            case 7 ->  _21 = value;
+            case 6 -> _20 = value;
+            case 7 -> _21 = value;
             case 8 -> _22 = value;
 
             default -> throw new IllegalStateException("(Row %d | Column %d) is out of bounds".formatted(row, column));
@@ -107,8 +111,8 @@ public final class FieldMatrix3f extends Matrix3f {
     @Override
     public float determinant() {
         return _00 * (_11 * _22 - _12 * _21)
-                + _01 * (_12 * _20 - _10 * _22)
-                + _02 * (_10 * _21 - _11 * _20);
+             + _01 * (_12 * _20 - _10 * _22)
+             + _02 * (_10 * _21 - _11 * _20);
     }
 
     @Override

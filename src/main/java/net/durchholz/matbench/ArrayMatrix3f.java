@@ -17,7 +17,9 @@ public final class ArrayMatrix3f extends Matrix3f {
         this(new float[LENGTH]);
     }
 
-    public ArrayMatrix3f(float _00, float _01, float _02, float _10, float _11, float _12, float _20, float _21, float _22) {
+    public ArrayMatrix3f(float _00, float _01, float _02,
+                         float _10, float _11, float _12,
+                         float _20, float _21, float _22) {
         this(new float[]{_00, _01, _02, _10, _11, _12, _20, _21, _22});
     }
 
@@ -53,8 +55,8 @@ public final class ArrayMatrix3f extends Matrix3f {
     @Override
     public float determinant() {
         return values[0] * (values[4] * values[8] - values[5] * values[7])
-                + values[1] * (values[5] * values[6] - values[3] * values[8])
-                + values[2] * (values[3] * values[7] - values[4] * values[6]);
+             + values[1] * (values[5] * values[6] - values[3] * values[8])
+             + values[2] * (values[3] * values[7] - values[4] * values[6]);
     }
 
     @Override
